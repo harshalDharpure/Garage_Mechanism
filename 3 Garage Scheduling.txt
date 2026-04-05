@@ -1,0 +1,18 @@
+3 Garage Scheduling
+As a garage owner with a background in Computer Science, you aim to optimize the daily schedule live
+to ensure both efficiency and mechanic well-being. Task Dynamics: Each task requires exactly 1 time
+unit. However, tasks possess a probabilistic element: completing a task may immediately trigger a new,
+mandatory sub-task (e.g., while servicing brakes, a mechanic discovers a defect in the axle).
+Input:
+ N types of cars, each represented by a Task Dependency Graph (DAG) where edge weights represent
+the probability of a task spawning a follow-up task.
+ A workforce of M mechanics.
+Constraints:
+ Fatigue Management: To prevent burnout, a mechanic must take a mandatory break of 1 time unit
+after performing k consecutive tasks.
+ Task Generation: After completing a task which has a probabilistic element, generate a random
+number between 0 and 1, if the number is higher than probability of task generation then the task
+is generated and add it to tasks list.
+Objective:
+Generate an initial optimal schedule disregarding all the probabilistic tasks and whenever a new task is
+added update the schedule to incorporate the new task.
